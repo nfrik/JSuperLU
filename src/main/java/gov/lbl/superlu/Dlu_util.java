@@ -375,6 +375,10 @@ public class Dlu_util {
 	    if ( (Gstat.procstat = new procstat_t[nprocs]) == null )
 		SUPERLU_ABORT( "SUPERLU_MALLOC failed for procstat[]" );
 
+	    for(int i=0;i<nprocs;i++){
+	    	Gstat.procstat[i]=new procstat_t();
+		}
+
 	if (PRNTlevel==1) {
 	    printf(".. StatAlloc(): n %d, nprocs %d, panel_size %d, relax %d\n",
 			n, nprocs, panel_size, relax);

@@ -49,8 +49,7 @@ public class Dlu_pdlinsol {
 	public static final int maxsup            = sp_ienv(3);
 
 
-	public static void pdlinsol(int m, int n, int nnz, double a[],
-		      int asub[], int xa[]) {
+	public static void pdlinsol(int m, int n, int nnz, double a[], int asub[], int xa[]) {
 		SuperMatrix   A = new SuperMatrix();
 	    NCformat Astore;
 	    int      perm_r[]; /* row permutations from partial pivoting */
@@ -110,6 +109,20 @@ public class Dlu_pdlinsol {
 
 	    }
 
+	}
+
+
+	public static void main(String[] args){
+
+		int m=5;
+		int n=5;
+
+		int nnz=12;
+
+
+
+		System.out.println("Hellew!!");
+//		pdlinsol();
 	}
 
 }
